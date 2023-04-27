@@ -11,7 +11,8 @@ export const trpc = createTRPCProxyClient<AppRouter>({
           fetch(url, options) {
             return fetch(url, {
               ...options,
-              credentials: 'include',
+            //   credentials: 'include',
+              mode:"no-cors"
             });
           },
         }),
